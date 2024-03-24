@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Glitch&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- 
+
+      TODO:
+      Connect contact to email service.
+      establish conneciton between social links to icons
+      testimonial section content
+
+     -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/video-editing.png" alt="logo" />
+        <h1>AYUSH</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </header>
+
+  <section id="home">
+    <div class="container">
+      <div class="text">
+        <h1 id="subhead">Hi, my name is</h1>
+        <h1 id="mainhead"></h1>
+      </div>
+      <div class="pfpImg">
+        <img src="images/pfp.png" alt="pfp" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+
+    <!-- The actual snackbar -->
+    <div id="snackbar"></div>
+    <div class="aboutSec">
+      <div class="profile">
+        <img src="images/profile.png" alt="profile" />
+      </div>
+      <div class="content">
+        <h1 class="dynamicHeader " style="font-size: 3rem">About Me</h1>
+        <h3>
+          Passionate Director and Video Editor skilled in fundamental editing
+          software, eager to contribute creativity to dynamic projects.
+          Possesses a keen eye for detail and a dedication to quality
+          storytelling. Excited to collaborate and develop skills in script
+          development, shooting, and post-production for compelling visual
+          content.
+        </h3>
+
+        <h4><span>Name:</span> Ayush Prakash</h4>
+        <h4><span>Phone:</span> +91 79033 76615</h4>
+        <h4><span>Date of birth:</span> March 7, 2006</h4>
+        <h4 onclick="showSnackbar('Double click to copy email.')"
+          ondblclick="() => {navigator.clipboard.writeText('ayush07prakash@gmail.com'); showSnackbar('Email copied to clicpboard')}">
+          <span>Email:</span> ayush07prakash@gmail.com</h4>
+
+        <div class="btns">
+          <button type="button">
+            <a href="images/resume.pdf" download="" onclick="showSnackbar('Starting download...')">DOWNLOAD CV</a>
+          </button>
+          <button type="button"><a href="#contact">Hire Me</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="content">
+      <h1 class="dynamicHeader text-center text-[4rem]">Portfolio</h1>
+      <section class="text-gray-400 body-font">
+        <div class="container mx-auto">
+          <div class="flex flex-col"></div>
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/LKxQCwJ_aUc?si=RWyDaaYdb2IuA4Y2"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <h2 class="text-xl font-medium title-font text-white mt-5">
+                QuickSip Coffee Commercial | Make every sip count.
+              </h2>
+              <p class="text-base leading-relaxed mt-2">
+                Introducing QuickSip Coffee's latest commercial, meticulously
+                crafted to elevate your coffee experience. From captivating
+                visuals to engaging storytelling, every frame invites you to
+                savor the moment. Join us as we celebrate the art of
+                coffee-making and the joy of every sip in this immersive
+                journey.
+              </p>
+              <a class="text-indigo-400 inline-flex items-center mt-3"
+                href="https://youtu.be/LKxQCwJ_aUc?si=Zw3i3kpRumloouFk">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <iframe class="h-full w-full" src="https://www.youtube.com/embed/vZCsEXL0sDQ?si=9CbCcIWe9Sy2-iNc"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <h2 class="text-xl font-medium title-font text-white mt-5">
+                Commercial for 'Iron Man Sneakers' by @TheSouledStoreOfficial!
+              </h2>
+              <p class="text-base leading-relaxed mt-2">
+                Introducing my latest commercial for 'Iron Man Sneakers' by
+                @TheSouledStoreOfficial. Step into superhero style with this
+                exclusive footwear line. Experience the thrill of adventure
+                with every step. Elevate your style with 'Iron Man Sneakers'.
+              </p>
+              <a class="text-indigo-400 inline-flex items-center mt-3"
+                href="https://youtu.be/vZCsEXL0sDQ?si=Hfr-kIdxoKlf1jBC">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/WwVDyJEgsRc?si=g99mlt2PwM4Q7qOD"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <h2 class="text-xl font-medium title-font text-white mt-5">
+                A short term commercial for a Hackathon.
+              </h2>
+              <p class="text-base leading-relaxed mt-2">
+                Announcing my latest commercial for the upcoming hackathon!
+                Join us for a whirlwind of innovation and creativity. Get
+                ready to code, collaborate, and conquer challenges in this
+                exciting short-term event.
+              </p>
+              <a class="text-indigo-400 inline-flex items-center mt-3"
+                href="https://youtu.be/WwVDyJEgsRc?si=g99mlt2PwM4Q7qOD">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="content">
+      <h1 class="dynamicHeader text-center">Services Offered</h1>
+      <div class="services-item">
+        <section class="text-gray-400 body-font">
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
+                <div class="flex items-center mb-3">
+                  <div
+                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-clapperboard">
+                      <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" />
+                      <path d="m6.2 5.3 3.1 3.9" />
+                      <path d="m12.4 3.4 3.1 4" />
+                      <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                    </svg>
+                  </div>
+                  <h2 class="text-white text-lg title-font font-medium">DIRECTION - <span
+                      class="lg:inline block bg-[#202020] py-1 px-3 text-white rounded-sm" style="opacity: 0.75;">Your
+                      story, My expertise</span></h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed text-base">Let me bring your vision to life with cinematic brilliance. With
+                    my expertise in video editing, I'll guide your story from start to finish, ensuring every moment
+                    captivates and resonates with your audience. Together, we'll create a masterpiece that leaves a
+                    lasting impact.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
+                <div class="flex items-center mb-3">
+                  <div
+                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-film">
+                      <rect width="18" height="18" x="3" y="3" rx="2" />
+                      <path d="M7 3v18" />
+                      <path d="M3 7.5h4" />
+                      <path d="M3 12h18" />
+                      <path d="M3 16.5h4" />
+                      <path d="M17 3v18" />
+                      <path d="M17 7.5h4" />
+                      <path d="M17 16.5h4" />
+                    </svg>
+                  </div>
+                  <h2 class="text-white text-lg title-font font-medium">Video Editing - <span
+                      class="lg:inline block bg-[#202020] py-1 px-3 text-white rounded-sm"
+                      style="opacity: 0.75;">Elevating your story!</span></h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed text-base">Unlock Your Creative Potential with Expert Video Editing Tailored
+                    Just for You. From refining your footage to adding the perfect touches, I'm here to bring your
+                    vision to life. Let's collaborate to transform your raw footage into a polished masterpiece that
+                    showcases your unique story and captivates your audience.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-8 px-4 flex-col">
+                <div class="flex items-center mb-3">
+                  <div
+                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-camera">
+                      <path
+                        d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                      <circle cx="12" cy="13" r="3" />
+                    </svg>
+                  </div>
+                  <h2 class="text-white text-lg title-font font-medium">Cinematography - <span
+                      class="lg:inline block bg-[#202020] py-1 px-3 text-white rounded-sm text-base"
+                      style="opacity: 0.75;">Freezing Moments, Crafting Enchantment</span></h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed text-base">Experience the Art of Cinematography Tailored to Your Vision.
+                    From framing shots to setting the mood, I'm dedicated to bringing your story to life on screen.
+                    Let's collaborate to craft cinematic visuals that mesmerize, evoke emotions, and leave a lasting
+                    impact on your audience. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  </div>
+  </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="content">
+      <h1 class="dynamicHeader text-center">Testimonials</h1>
+      <div class="testimonial-item">
+        <section class="text-gray-400 body-font">
+          <div class="container px-5 mx-auto">
+            <div class="flex flex-wrap -m-4">
+              <div class="p-4 md:w-1/2 w-full">
+                <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-500 mb-4"
+                    viewBox="0 0 975.036 975.036">
+                    <path
+                      d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                    </path>
+                  </svg>
+                  <p class="leading-relaxed mb-6">
+
+                    "Hey little bro,
+
+                    Just a quick note to say how proud I am of you. You're on the right path, and I believe in you. Keep
+                    pushing forward, keep striving. Your determination is inspiring. I'm always here for you.
+                  </p>
+                  <a class="inline-flex items-center">
+                    <img alt="testimonial" src="images/piyush.png"
+                      class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-white">Piyush Prakash</span>
+                      <span class="text-gray-500 text-sm">Mechanical Enginner</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/2 w-full">
+                <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-500 mb-4"
+                    viewBox="0 0 975.036 975.036">
+                    <path
+                      d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                    </path>
+                  </svg>
+                  <p class="leading-relaxed mb-6">
+                    "Hey friend,
+
+                    Just wanted to say, I'm really proud of the progress you're making. Keep pushing forward, you're on the right track. Your determination is inspiring. I'm here for you always. Cheering up on every step!!</p>
+                  <a class="inline-flex items-center">
+                    <img alt="testimonial" src="images/pfp2.jpeg"
+                      class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-white">Aswin Anand</span>
+                      <span class="text-gray-500 text-sm">Full Stack Developer</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="content">
+      <h1 class="dynamicHeader text-center">Contact</h1>
+      <section class="text-gray-400 body-font relative">
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+          <div class="flex flex-wrap -m-2">
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+                <input type="text" id="name" name="name"
+                  class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required>
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                <input type="email" id="email" name="email"
+                  class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required>
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <div class="relative">
+                <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
+                <textarea id="message" name="message"
+                  class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  required></textarea>
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <button
+                class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                onclick="sendEmail()">Send</button>
+            </div>
+            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center cursor-pointer">
+              <a class="text-indigo-400">ayush07prakash@gmail.com</a>
+              <p class="leading-normal my-5"> +91 79033 76615</p>
+              <span class="inline-flex">
+                <a class="text-gray-500" href="https://www.linkedin.com/in/ayushprakash07" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-linkedin w-7 h-7">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+                <a class="ml-4 text-gray-500" href="https://x.com/AyushPr25752389" target="_blank">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-7 h-7" viewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a class="ml-4 text-gray-500" href="https://www.instagram.com/ayushprakash7/" target="_blank">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-7 h-7" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a class="ml-4 text-gray-500" onclick="phCopied()">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-phone-call w-7 h-7">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                    <path d="M14.05 6A5 5 0 0 1 18 10" />
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  </div>
+  </section>
+
+  <footer>
+    <div class="content">
+      <p>&copy; 2024 Ayush Prakash</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
