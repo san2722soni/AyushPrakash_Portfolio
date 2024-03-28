@@ -30,7 +30,7 @@ function typeEffect(element, word, index) {
       element.textContent = ""; // Clear text after typing
       updateSubhead(); // Update subhead after clearing
       typeEffect(element, skills[currentWordIndex], 0); // Start typing the next word
-    }, 1500); // Delay before clearing and typing next word
+    }, 1200); // Delay before clearing and typing next word
   }
 }
 

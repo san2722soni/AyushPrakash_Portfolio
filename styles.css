@@ -7,7 +7,7 @@ html{
 body {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -367,6 +367,17 @@ html {
     flex-direction: column;
     justify-content: space-between;
   }
+  .container .text{
+    width: 100%;
+  }
+  .container #mainhead{
+    font-size: 40px;
+  }
+
+  .container #subhead{
+    margin: 0 0 0 20%;
+  }
+
   .pfpImg {
     width: 250px;
     height: 250px;
@@ -384,6 +395,15 @@ html {
     margin-left: 0;
     justify-content: center;
     align-items: center;
+  }
+
+  .aboutSec .content .btns{
+    display: flex;
+  }
+
+  .aboutSec .content button{
+    padding: 9px 13px;
+    font-size: 15px;
   }
 
   .profile{
