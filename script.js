@@ -111,5 +111,5 @@ function showSnackbar(text) {
 
 const phCopied = () => {
   showSnackbar("Phone number copied to your clipboard!");
-  navigator.clipboard.writeText("+91 79033 76615");
+  navigator.clipboard.writeText("+91 7903376615");
 }
