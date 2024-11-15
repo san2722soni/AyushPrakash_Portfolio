@@ -10,7 +10,7 @@ mobileNav.addEventListener("click", () => toggleNav());
 // TYPING ANIMATION
 
 let skills = ["Editor", "Ayush Prakash", "Director"];
-let pronouns = ["Hi, my name is", "I am a passionate", "An :"];
+let pronouns = ["Hi, my name is:", "I am a passionate:", "An :"];
 let currentWordIndex = 0;
 
 function updateSubhead() {
@@ -54,16 +54,16 @@ window.onscroll = () => {
 
 // Sending data enterd in form to mail via smtp js
 
-function sendEmail(){
+function sendEmail() {
   const username = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
-  
+
   if (username == "" || email == "" || message == "") {
     alert("Pls fill the input fields");
     return;
   }
-  
+
   function sendMail() {
     emailjs.init({
       publicKey: "mI2ZHUDcI9BrIjh4X",
@@ -71,27 +71,28 @@ function sendEmail(){
   }
 
   sendMail();
-  
+
   const values = {
     username: username,
     email: email,
-    message: message
-  }
-  
-  const serviceID = "service_s54x2ff"
+    message: message,
+  };
+
+  const serviceID = "service_s54x2ff";
   const templateID = "template_0un6hco";
-  
-  emailjs.send(serviceID, templateID, values)
-  .then(  (response) => {
-    console.log('SUCCESS!', response.status, response.text);
-    showSnackbar("Email sent successfully!");
-  },
-  (error) => {
-    console.log('FAILED...', error);
-  })
+
+  emailjs.send(serviceID, templateID, values).then(
+    (response) => {
+      console.log("SUCCESS!", response.status, response.text);
+      showSnackbar("Email sent successfully!");
+    },
+    (error) => {
+      console.log("FAILED...", error);
+    }
+  );
 }
 
-// Snackbar code 
+// Snackbar code
 
 function showSnackbar(text) {
   // Get the snackbar DIV
@@ -104,7 +105,9 @@ function showSnackbar(text) {
   x.className = "show";
 
   // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  setTimeout(function () {
+    x.className = x.className.replace("show", "");
+  }, 3000);
 }
 
 // Phone number copied code ...
@@ -112,4 +115,19 @@ function showSnackbar(text) {
 const phCopied = () => {
   showSnackbar("Phone number copied to your clipboard!");
   navigator.clipboard.writeText("+91 7903376615");
-}
+};
+
+// Splash Screen
+document.addEventListener('DOMContentLoaded', () => {
+  const splashScreen = document.querySelector('.splash-screen');
+  
+  // Fade out splash screen after 2.5 seconds
+  setTimeout(() => {
+    splashScreen.classList.add('fade-out');
+    
+    // Remove splash screen from DOM after animation completes
+    setTimeout(() => {
+      splashScreen.remove();
+    }, 800); // Match this with the CSS transition duration
+  }, 2500);
+});
