@@ -235,29 +235,6 @@ html {
     blink 0.5s step-end infinite alternate;
 }
 
-@keyframes shring-animation {
-  0% {
-    background-position: 0 0;
-    opacity: 0;
-    width: 0;
-  }
-  1% {
-    background-position: 0 0;
-    opacity: 1;
-    border-right: 1px solid orange;
-  }
-  50% {
-    background-position: 150px 0;
-    opacity: 1;
-    border-right: 1px solid orange;
-  }
-  100% {
-    background-position: 400px 0;
-    opacity: 1;
-    border-right: 1px solid orange;
-  }
-}
-
 @keyframes type {
   0% {
     width: 0;
@@ -373,7 +350,7 @@ html {
   }
 
   .container #mainhead {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .container #subhead {
